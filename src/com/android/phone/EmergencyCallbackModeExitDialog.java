@@ -82,8 +82,8 @@ public class EmergencyCallbackModeExitDialog extends Activity implements OnCance
         // Check if phone is in Emergency Callback Mode. If not, exit.
         final boolean isInEcm = Boolean.parseBoolean(
                 SystemProperties.get(TelephonyProperties.PROPERTY_INECM_MODE));
-        Log.i(TAG, "ECMModeExitDialog launched - isInEcm: " + isInEcm + " phone:" + mPhone);
         if (mPhone == null || !isInEcm) {
+            Log.i(TAG, "ECMModeExitDialog launched - isInEcm: " + isInEcm + " phone:" + mPhone);
             finish();
             return;
         }
